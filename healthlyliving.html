@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Living – Meal Ideas</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 2.5em;
+            border-bottom: 4px solid #27ae60;
+            padding-bottom: 15px;
+        }
+        
+        .intro {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #27ae60;
+        }
+        
+        .intro h2 {
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+        
+        .intro ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .meal-section {
+            margin-bottom: 40px;
+        }
+        
+        .meal-section h2 {
+            color: #2980b9;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .meal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .meal-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .meal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .meal-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .meal-card p {
+            color: #555;
+            font-size: 0.95em;
+        }
+        
+        .breakfast-card {
+            border-left-color: #e74c3c;
+        }
+        
+        .lunch-card {
+            border-left-color: #f39c12;
+        }
+        
+        .dinner-card {
+            border-left-color: #9b59b6;
+        }
+        
+        .snack-card {
+            border-left-color: #27ae60;
+        }
+        
+        .tips {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border-left: 5px solid #ffc107;
+        }
+        
+        .tips h2 {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+        
+        .tips ul {
+            margin-left: 20px;
+        }
+        
+        .tips li {
+            margin-bottom: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .meal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+    
+
+        .main-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.6rem 1.2rem;
+            margin: 0 0 1rem 0;
+            background: #ffffffee;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            border-radius: 12px;
+        }
+        .nav-logo {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #0b4370;
+        }
+        .nav-links {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-size: 0.9rem;
+            color: #0b4370;
+            padding: 0.3rem 0.7rem;
+            border-radius: 999px;
+            transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+        }
+        .nav-links a:hover {
+            background: #0b6aa8;
+            color: #fff;
+            transform: translateY(-1px);
+        }
+        .container {
+            padding-top: 1.2rem;
+        }
+        @media (max-width: 600px) {
+            .main-nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌿 Healthy Living – Meal Ideas</h1>
+
+        <nav class="main-nav">
+            <div class="nav-logo">Healthy Living</div>
+            <div class="nav-links">
+                <a href="#breakfast">Breakfast</a>
+                <a href="#lunch">Lunch</a>
+                <a href="#dinner">Dinner</a>
+                <a href="#snacks">Snacks</a>
+                <a href="#drinks">Drinks</a>
+                <a href="#tips">Tips</a>
+            </div>
+        </nav>
+
+<div class="intro">
+    <h2>About This Healthy Living Meal Guide</h2>
+    <p>
+        This guide focuses on delicious, everyday meals that support heart health, steady energy,
+        and overall well-being. The emphasis is on:
+    </p>
+    <ul>
+        <li><strong>Colorful Plants:</strong> Fruits, vegetables, beans, and lentils for fiber and nutrients.</li>
+        <li><strong>Wholesome Carbohydrates:</strong> Oats, brown rice, quinoa, whole wheat, and barley.</li>
+        <li><strong>Healthy Fats:</strong> Olive oil, nuts, seeds, avocado, and naturally oily fish.</li>
+        <li><strong>Lean Proteins:</strong> Fish, poultry, legumes, tofu, and other plant-based proteins.</li>
+        <li><strong>Gentle on the Heart:</strong> Meals that naturally support healthy cholesterol and blood pressure.</li>
+    </ul>
+    <p>
+        Mix and match options from breakfast, lunch, dinner, and snacks to build a flexible, sustainable
+        way of eating that feels good—physically and mentally.
+    </p>
+</div>
+
+
+        <div class="meal-section" id="breakfast">
+            <h2>🌅 Breakfast Ideas (Healthy Options)</h2>
+            <div class="meal-grid">
+
+                <div class="meal-card breakfast-card">
+                    <h3>1. Apple Cinnamon Oatmeal</h3>
+                    <p>Rolled oats cooked with diced apples, cinnamon, walnuts, and a tablespoon of almond butter. Heart-healthy and filling.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>2. Apple Cinnamon Quinoa Bowl</h3>
+                    <p>Cooked quinoa warmed with diced apple; Cinnamon and crushed walnuts; Drizzle of honey (small amount)</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>3. Avocado Toast Deluxe</h3>
+                    <p>Whole grain toast with mashed avocado, cherry tomatoes, hemp seeds, and a poached egg. Packed with healthy fats.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>4. Avocado Whole-Grain Toast</h3>
+                    <p>Whole-grain toast; Mashed avocado with lemon and pepper; Tomato slices on top (optional)</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>5. Banana Walnut Smoothie</h3>
+                    <p>Blend banana, spinach, walnuts, flaxseed, Greek yogurt, and almond milk. Nutrient-dense breakfast on-the-go.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>6. Barley Breakfast Bowl</h3>
+                    <p>Cooked pearl barley with pears, hazelnuts, cinnamon, and a drizzle of honey. High in beta-glucan fiber.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>7. Barley Breakfast Porridge</h3>
+                    <p>Cooked barley with cinnamon; Raisins and sliced almonds; Low-fat milk or soy milk splash</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>8. Berry & Flax Oatmeal</h3>
+                    <p>Oatmeal topped with mixed berries; 1–2 tbsp ground flaxseed; Dash of vanilla</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>9. Berry Smoothie Bowl</h3>
+                    <p>Blended acai, banana, and mixed berries topped with sliced almonds, coconut flakes, and fresh fruit. Antioxidant-rich.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>10. Buckwheat Porridge</h3>
+                    <p>Cooked buckwheat groats with blueberries, sunflower seeds, and a splash of soy milk. Gluten-free and fiber-rich.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>11. Chia Pudding</h3>
+                    <p>Chia seeds soaked in almond milk overnight; Vanilla extract; Topped with sliced kiwi</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>12. Chia Seed Pudding</h3>
+                    <p>Chia seeds soaked in almond milk overnight, topped with mango, kiwi, and crushed pistachios. Omega-3 rich.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>13. Classic Oatmeal Bowl</h3>
+                    <p>Steel-cut oats topped with fresh berries, ground flaxseed, chopped walnuts, and a drizzle of honey. Rich in soluble fiber.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>14. Cottage Cheese & Fruit</h3>
+                    <p>Low-fat cottage cheese topped with pineapple, peaches, ground flaxseed, and chopped almonds. High protein, low fat.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>15. Cottage Cheese & Fruit Plate</h3>
+                    <p>Low-fat cottage cheese; Pineapple chunks or fresh berries; Sprinkle of ground flax or chia</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>16. Greek Yogurt Parfait</h3>
+                    <p>Non-fat Greek yogurt layered with mixed berries, granola, chia seeds, and sliced almonds. High in protein and probiotics.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>17. Green Berry Smoothie</h3>
+                    <p>Spinach, frozen berries, half a banana; Unsweetened almond milk; 1 tbsp ground flaxseed</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>18. Green Smoothie</h3>
+                    <p>Spinach, kale, banana, pineapple, chia seeds, and coconut water blended until smooth. Vitamin-packed start.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>19. High-Fiber Cereal Bowl</h3>
+                    <p>High-fiber, low-sugar cereal (bran flakes, etc.); Low-fat milk or plant milk; Sliced strawberries</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>20. Low-Fat Greek Yogurt Parfait</h3>
+                    <p>Low-fat plain Greek yogurt; Raspberries and rolled oats; 1 tsp chia seeds</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>21. Mediterranean Scramble</h3>
+                    <p>Scrambled eggs with feta cheese, olives, sun-dried tomatoes, and fresh basil on whole grain toast. Mediterranean diet staple.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>22. Muesli with Berries</h3>
+                    <p>Raw oats, nuts, seeds, and dried fruit soaked in almond milk overnight, topped with fresh berries.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>23. Nutty Banana Wrap</h3>
+                    <p>100% whole-wheat tortilla; Thin layer of almond or peanut butter; Whole banana rolled inside</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>24. Oat Bran Pancakes</h3>
+                    <p>Homemade pancakes using oat bran and whole-wheat flour; Light drizzle of pure maple syrup; Fresh berries on top</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>25. Overnight Oats with Chia</h3>
+                    <p>Rolled oats soaked in almond milk overnight; Chia seeds and cinnamon; Blueberries added in the morning</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>26. Peanut Butter & Banana Toast</h3>
+                    <p>Whole-grain bread; Thin layer of natural peanut butter; Sliced banana and chia seeds</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>27. Protein Power Bowl</h3>
+                    <p>Hard-boiled eggs, quinoa, avocado, cherry tomatoes, and pumpkin seeds with lemon dressing.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>28. Quinoa Breakfast Bowl</h3>
+                    <p>Cooked quinoa with almond milk, cinnamon, diced apples, pecans, and a touch of maple syrup. Complete protein source.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>29. Simple Fruit & Nut Plate</h3>
+                    <p>Apple or pear slices; Small handful of unsalted nuts (walnuts, almonds); Optional: 1 string cheese (low-fat)</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>30. Smoked Salmon & Avocado Toast</h3>
+                    <p>Whole-grain toast; Thin layer of avocado; Smoked salmon slices and arugula</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>31. Smoked Salmon Bagel</h3>
+                    <p>Whole grain bagel with low-fat cream cheese, smoked salmon, capers, red onion, and cucumber. High in omega-3s.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>32. Steel-Cut Oats with Almonds</h3>
+                    <p>Steel-cut oats cooked with water or low-fat milk; Chopped almonds and diced apple; Nutmeg or cinnamon</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>33. Sweet Potato Toast</h3>
+                    <p>Roasted sweet potato slices topped with almond butter, banana, and a sprinkle of cinnamon. Unique and nutritious.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>34. Tofu Scramble</h3>
+                    <p>Crumbled tofu sautéed with turmeric, vegetables, and nutritional yeast. Plant-based protein alternative.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>35. Veggie Breakfast Burrito</h3>
+                    <p>Whole wheat tortilla with scrambled egg whites, black beans, avocado, salsa, and peppers. Fiber and protein packed.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>36. Veggie Egg White Omelet</h3>
+                    <p>Egg whites with spinach, mushrooms, tomatoes, and bell peppers. Served with whole grain toast. Low in saturated fat.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>37. Veggie Egg-White Omelet</h3>
+                    <p>Egg whites or 1 whole egg + 2 whites; Spinach, tomatoes, onions, peppers; Cooked in a small amount of olive oil</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>38. Whole Grain Pancakes</h3>
+                    <p>Pancakes made with whole wheat flour, topped with fresh strawberries and sugar-free syrup. Add ground flaxseed to batter.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>39. Whole Grain Waffles</h3>
+                    <p>Homemade whole wheat waffles topped with mixed berries, a dollop of Greek yogurt, and crushed walnuts.</p>
+                </div>
+                <div class="meal-card breakfast-card">
+                    <h3>40. Whole-Grain English Muffin Sandwich</h3>
+                    <p>Whole-grain English muffin; Egg white patty; Tomato slice and spinach</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="meal-section" id="lunch">
+            <h2>☀️ Lunch Ideas (Healthy Options)</h2>
+            <div class="meal-grid">
+
+                <div class="meal-card lunch-card">
+                    <h3>1. Asian Salmon Salad</h3>
+                    <p>Grilled salmon over Asian greens with edamame, mandarin oranges, almonds, and ginger-sesame dressing.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>2. Baked Falafel Pita</h3>
+                    <p>Baked falafel (chickpea patties); Whole-wheat pita, lettuce, tomato, cucumber; Tahini-lemon sauce</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>3. Baked Sweet Potato & Black Bean</h3>
+                    <p>Baked sweet potato; Black beans, salsa, cilantro; Small spoon of plain Greek yogurt</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>4. Barley & Bean Salad</h3>
+                    <p>Cooked barley, kidney beans; Diced peppers, onions, herbs; Olive oil & vinegar</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>5. Barley Risotto</h3>
+                    <p>Pearl barley cooked risotto-style with mushrooms, peas, herbs, and a touch of parmesan. Fiber-rich alternative.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>6. Black Bean & Brown Rice Bowl</h3>
+                    <p>Brown rice topped with black beans; Tomatoes, corn, cilantro, salsa; Small avocado slices</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>7. Black Bean Burger</h3>
+                    <p>Homemade black bean burger on whole grain bun with avocado, lettuce, tomato, and sweet potato fries.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>8. Brown Rice Sushi Roll</h3>
+                    <p>Brown rice, nori sheets; Cucumber, avocado, carrot, salmon or tofu; Low-sodium soy sauce</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>9. Buddha Bowl</h3>
+                    <p>Brown rice, roasted chickpeas, kale, sweet potato, edamame, and tahini dressing. Plant-based complete meal.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>10. Caprese Sandwich</h3>
+                    <p>Whole grain bread with fresh mozzarella, tomatoes, basil, and balsamic glaze. Served with side salad.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>11. Chicken & Vegetable Soup</h3>
+                    <p>Lean chicken breast with carrots, celery, onions, and herbs in low-sodium broth with whole grain noodles.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>12. Chickpea Salad Bowl</h3>
+                    <p>Chickpeas, cucumber, tomato, red onion; Olive oil, lemon, herbs; Over mixed greens</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>13. Falafel Pita Pocket</h3>
+                    <p>Whole wheat pita with baked falafel, hummus, lettuce, tomato, and cucumber. Plant-based protein.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>14. Greek Chicken Wrap</h3>
+                    <p>Grilled chicken, tzatziki, cucumber, tomatoes, and olives in whole wheat wrap. Mediterranean flavors.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>15. Grilled Chicken & Farro Salad</h3>
+                    <p>Farro, grilled chicken strips; Arugula, cherry tomatoes, olives; Olive oil vinaigrette</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>16. Grilled Chicken Salad</h3>
+                    <p>Grilled chicken breast over mixed greens, walnuts, apple slices, and balsamic vinaigrette. Heart-healthy combo.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>17. Grilled Salmon Bowl</h3>
+                    <p>Grilled wild salmon over quinoa with roasted vegetables, avocado, and tahini sauce. Omega-3 powerhouse.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>18. Grilled Salmon Salad</h3>
+                    <p>Mixed greens, cherry tomatoes, cucumbers; 4–5 oz grilled salmon; Olive oil & lemon dressing</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>19. Hummus & Veggie Plate</h3>
+                    <p>Hummus with carrot sticks, celery, bell peppers; Whole-grain pita wedges; Side of fruit</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>20. Lentil & Vegetable Soup</h3>
+                    <p>Lentils, carrots, celery, onions, tomatoes; Low-sodium vegetable broth; Side of whole-grain bread</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>21. Lentil Vegetable Soup</h3>
+                    <p>Hearty soup with green lentils, carrots, celery, tomatoes, and herbs. Served with whole grain bread.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>22. Mediterranean Chickpea Salad</h3>
+                    <p>Mixed greens, chickpeas, cucumber, cherry tomatoes, olives, feta, and olive oil-lemon dressing. Fiber and protein rich.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>23. Mediterranean Power Salad</h3>
+                    <p>Romaine, cucumbers, tomatoes, olives; Chickpeas, a sprinkle of feta; Olive oil & red wine vinegar</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>24. Minestrone Soup</h3>
+                    <p>Italian vegetable soup with beans, pasta, tomatoes, and vegetables. Served with a side salad.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>25. Quinoa Tabbouleh</h3>
+                    <p>Quinoa-based tabbouleh with parsley, mint, tomatoes, cucumber, and lemon juice. Refreshing and nutritious.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>26. Quinoa Tabbouleh Bowl</h3>
+                    <p>Quinoa, parsley, tomato, cucumber, onion; Olive oil, lemon, mint; Side of mixed greens</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>27. Roasted Veggie & Hummus Sandwich</h3>
+                    <p>Whole-grain bread; Roasted zucchini, peppers, onions; Hummus spread</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>28. Sardines on Whole-Grain Toast</h3>
+                    <p>Sardines in water or olive oil, drained; Whole-grain toast; Lemon juice and pepper</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>29. Simple Bean & Veggie Burrito</h3>
+                    <p>Whole-wheat tortilla; Pinto or black beans, lettuce, tomato, salsa; Small sprinkle of reduced-fat cheese (optional)</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>30. Spicy Tofu Stir-Fry</h3>
+                    <p>Crispy tofu with broccoli, bell peppers, snap peas, and brown rice in a ginger-garlic sauce. Plant-based option.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>31. Spinach & Walnut Salad</h3>
+                    <p>Baby spinach with walnuts, strawberries, goat cheese, and balsamic vinaigrette. Antioxidant-rich.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>32. Stuffed Bell Peppers</h3>
+                    <p>Bell peppers stuffed with quinoa and black beans; Tomato sauce & herbs; Side salad</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>33. Tuna & White Bean Salad</h3>
+                    <p>Canned tuna in water, rinsed; White beans, red onion, parsley; Olive oil, lemon, pepper</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>34. Tuna Salad Lettuce Wraps</h3>
+                    <p>Tuna mixed with Greek yogurt, celery, and herbs wrapped in crisp lettuce leaves. Low-carb, high-protein.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>35. Turkey & Avocado Wrap</h3>
+                    <p>Whole wheat wrap with sliced turkey breast, avocado, lettuce, tomato, and mustard. Lean protein option.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>36. Vegetarian Chili</h3>
+                    <p>Black beans, kidney beans, tomatoes, peppers, and spices. Topped with avocado and served with brown rice.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>37. Veggie Sushi Bowl</h3>
+                    <p>Brown rice with avocado, cucumber, edamame, carrots, and seaweed with soy-ginger dressing.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>38. Veggie-Packed Minestrone</h3>
+                    <p>Tomato-based soup with beans and vegetables; Whole-wheat pasta pieces; Side of mixed green salad</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>39. White Bean & Kale Soup</h3>
+                    <p>Cannellini beans, kale, carrots, and herbs in vegetable broth. Served with whole grain crackers.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>40. Whole Grain Pasta Primavera</h3>
+                    <p>Whole wheat pasta with seasonal vegetables, olive oil, garlic, and fresh herbs. Italian heart-healthy.</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>41. Whole-Grain Pasta Primavera</h3>
+                    <p>Whole-grain pasta; Broccoli, peas, carrots, peppers; Olive oil, garlic, herbs</p>
+                </div>
+                <div class="meal-card lunch-card">
+                    <h3>42. Whole-Wheat Turkey & Veggie Wrap</h3>
+                    <p>Whole-wheat tortilla; Low-sodium turkey breast, lettuce, tomato; Mustard or hummus instead of mayo</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="meal-section" id="dinner">
+            <h2>🌙 Dinner Ideas (Healthy Options)</h2>
+            <div class="meal-grid">
+
+                <div class="meal-card dinner-card">
+                    <h3>1. Baked Chicken & Sweet Potato</h3>
+                    <p>Herb-baked chicken breast; Roasted sweet potato wedges; Steamed green beans</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>2. Baked Cod Mediterranean</h3>
+                    <p>Cod baked with tomatoes, olives, capers, and herbs with roasted potatoes. Mediterranean diet staple.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>3. Baked Cod with Tomato & Olive Relish</h3>
+                    <p>Baked cod fillet; Topping of diced tomatoes, olives, capers; Served with barley and green beans</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>4. Baked Halibut & Greens</h3>
+                    <p>Herb-crusted halibut with sautéed kale and roasted garlic potatoes. Elegant and healthy.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>5. Baked Salmon with Quinoa</h3>
+                    <p>Herb-crusted salmon with quinoa pilaf and roasted Brussels sprouts. Perfect omega-3 dinner.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>6. Baked Salmon with Roasted Vegetables</h3>
+                    <p>Baked salmon with lemon and herbs; Roasted Brussels sprouts and carrots; Small side of brown rice</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>7. Baked Tilapia with Lemon & Herbs</h3>
+                    <p>Baked tilapia fillet; Brown rice pilaf; Steamed asparagus</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>8. Barley & Mushroom Pilaf with Beans</h3>
+                    <p>Barley cooked with mushrooms and onions; White beans mixed in; Side of roasted Brussels sprouts</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>9. Black Bean Enchiladas</h3>
+                    <p>Whole wheat tortillas filled with black beans, vegetables, and topped with light cheese and salsa.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>10. Butternut Squash Soup & Salad</h3>
+                    <p>Roasted butternut squash soup with mixed green salad and whole grain roll. Comforting dinner.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>11. Chicken Fajita Bowl</h3>
+                    <p>Grilled chicken with peppers, onions, black beans, brown rice, and guacamole. Tex-Mex style.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>12. Chickpea & Spinach Curry</h3>
+                    <p>Chickpeas simmered with tomatoes, onions, and spinach; Curry spices; Served over brown rice</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>13. Chickpea Curry</h3>
+                    <p>Spiced chickpea curry with spinach served over brown basmati rice. Fiber and protein rich.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>14. Eggplant Parmesan</h3>
+                    <p>Baked eggplant with marinara and light mozzarella, served with whole grain pasta. Italian comfort food.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>15. Grilled Chicken & Quinoa</h3>
+                    <p>Grilled skinless chicken breast; Quinoa with herbs; Steamed broccoli</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>16. Grilled Chicken & Sweet Potato</h3>
+                    <p>Lemon-herb chicken breast with roasted sweet potato and steamed broccoli. Balanced and satisfying.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>17. Grilled Fish Tacos</h3>
+                    <p>Grilled white fish or salmon pieces; Cabbage slaw, pico de gallo, avocado; Corn tortillas</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>18. Grilled Shrimp with Whole-Wheat Couscous</h3>
+                    <p>Grilled shrimp skewers; Whole-wheat couscous with vegetables; Side salad</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>19. Grilled Trout & Vegetables</h3>
+                    <p>Fresh trout with asparagus, cherry tomatoes, and wild rice. Light and flavorful.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>20. Grilled Tuna Steaks</h3>
+                    <p>Sesame-crusted tuna with bok choy and brown rice. Asian-inspired heart-healthy meal.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>21. Grilled Veggie Plate with Hummus</h3>
+                    <p>Grilled zucchini, peppers, onions, eggplant; Side of hummus; Small portion of whole-grain pita</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>22. Lentil & Vegetable Stew</h3>
+                    <p>Hearty stew with red lentils, carrots, potatoes, and herbs. Served with whole grain bread.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>23. Lentil Bolognese</h3>
+                    <p>Hearty lentil sauce over whole wheat pasta with side salad. Plant-based Italian classic.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>24. Mediterranean Baked Chicken Thighs</h3>
+                    <p>Skinless chicken thighs baked with tomatoes and olives; Served with farro or barley; Side of roasted vegetables</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>25. Mediterranean Chicken</h3>
+                    <p>Chicken breast with artichokes, sun-dried tomatoes, olives, and farro. Mediterranean flavors.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>26. Mushroom Barley Risotto</h3>
+                    <p>Creamy barley risotto with mixed mushrooms and peas. Side of roasted vegetables.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>27. Pesto Pasta with Vegetables</h3>
+                    <p>Whole grain pasta with homemade basil-walnut pesto and roasted vegetables. Italian classic.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>28. Shrimp & Vegetable Skewers</h3>
+                    <p>Grilled shrimp with bell peppers, onions, and zucchini over quinoa. Light and protein-packed.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>29. Slow-Cooker Bean & Vegetable Stew</h3>
+                    <p>Mixed beans (kidney, black, pinto); Carrots, celery, onions, tomatoes; Served over barley or brown rice</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>30. Stuffed Bell Peppers</h3>
+                    <p>Peppers filled with quinoa, black beans, corn, and spices. Topped with a touch of cheese.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>31. Stuffed Eggplant</h3>
+                    <p>Eggplant halves stuffed with quinoa, tomatoes, and herbs; Baked until tender; Side salad</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>32. Teriyaki Chicken Bowl</h3>
+                    <p>Grilled chicken with homemade teriyaki sauce, edamame, carrots, and brown rice. Asian fusion.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>33. Tofu Stir-Fry</h3>
+                    <p>Firm tofu stir-fried in a little olive or canola oil; Broccoli, snap peas, peppers, carrots; Served over brown rice</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>34. Turkey Chili with Beans</h3>
+                    <p>Lean ground turkey; Kidney beans, black beans, tomatoes, onions; Spices; served with small side of brown rice</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>35. Turkey Meatballs & Zucchini Noodles</h3>
+                    <p>Lean turkey meatballs with spiralized zucchini and marinara sauce. Low-carb option.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>36. Vegetarian Stir-Fry</h3>
+                    <p>Tofu and mixed vegetables over brown rice with ginger-garlic sauce. Colorful and nutrient-dense.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>37. Veggie & Bean Tacos</h3>
+                    <p>Corn or whole-wheat tortillas; Black beans, lettuce, tomato, salsa; Avocado slices</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>38. Veggie Burger Dinner</h3>
+                    <p>Homemade lentil-mushroom burger with sweet potato wedges and coleslaw. Plant-based comfort.</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>39. Veggie-Packed Frittata</h3>
+                    <p>Eggs or egg whites with peppers, onions, zucchini; Baked and sliced; Side of mixed salad greens</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>40. Whole-Grain Pizza Night</h3>
+                    <p>Whole-wheat pizza crust; Tomato sauce, mushrooms, spinach, onions, peppers; Light sprinkle of part-skim mozzarella</p>
+                </div>
+                <div class="meal-card dinner-card">
+                    <h3>41. Whole-Wheat Spaghetti with Marinara & Veggies</h3>
+                    <p>Whole-wheat spaghetti; Tomato marinara sauce; Spinach, mushrooms, onions, peppers added</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="meal-section" id="snacks">
+            <h2>🍎 Snack Ideas (Healthy Options)</h2>
+            <div class="meal-grid">
+
+                <div class="meal-card snack-card">
+                    <h3>1. Air-Popped Popcorn</h3>
+                    <p>3 cups air-popped popcorn with light seasoning. Low-calorie, whole grain snack.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>2. Apple Slices with Almond Butter</h3>
+                    <p>Fresh apple slices with 2 tablespoons natural almond butter. Perfect balance of fiber and healthy fats.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>3. Banana & Peanut Butter</h3>
+                    <p>1 small banana; 1 tbsp natural peanut butter</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>4. Banana with Peanut Butter</h3>
+                    <p>Medium banana with 1 tablespoon natural peanut butter. Potassium and healthy fats.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>5. Berries & Low-Fat Yogurt</h3>
+                    <p>Plain low-fat yogurt; Fresh or frozen berries</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>6. Carrot & Celery Sticks with Hummus</h3>
+                    <p>Raw carrot and celery sticks; Hummus for dipping</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>7. Celery with Peanut Butter & Raisins</h3>
+                    <p>Celery stalks; Thin layer of peanut butter; A few raisins (“ants on a log”)</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>8. Celery with Sunflower Butter</h3>
+                    <p>Celery sticks with sunflower seed butter. Nut-free option packed with nutrients.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>9. Cherry Tomatoes & Mozzarella</h3>
+                    <p>Cherry tomatoes with small mozzarella balls and basil. Italian-inspired snack.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>10. Cottage Cheese & Pineapple</h3>
+                    <p>Low-fat cottage cheese with fresh pineapple chunks. Protein and vitamin C.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>11. Cucumber Rounds with Tzatziki</h3>
+                    <p>Thick cucumber slices topped with Greek yogurt tzatziki sauce. Refreshing and light.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>12. Dark Chocolate & Almonds</h3>
+                    <p>1 oz dark chocolate (70%+ cacao) with 10 almonds. Antioxidants and healthy fats.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>13. Edamame</h3>
+                    <p>Steamed edamame with a light sprinkle of sea salt. Plant-based protein and fiber.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>14. Grapes & String Cheese</h3>
+                    <p>1 small bunch of grapes; 1 stick of part-skim string cheese</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>15. Greek Yogurt with Berries</h3>
+                    <p>Small container non-fat Greek yogurt topped with fresh blueberries. High protein, low fat.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>16. Guacamole with Vegetables</h3>
+                    <p>Fresh guacamole with jicama sticks and bell pepper strips. Heart-healthy snack.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>17. Handful of Unsalted Nuts</h3>
+                    <p>Walnuts, almonds, or pistachios; About a small handful (1 oz)</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>18. Homemade Trail Mix</h3>
+                    <p>Plain nuts, seeds (pumpkin, sunflower), and a few raisins; No candy or chocolate</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>19. Hummus & Veggies</h3>
+                    <p>Carrot sticks, cucumber, bell peppers with 1/4 cup hummus. Fiber and plant protein snack.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>20. Kale Chips</h3>
+                    <p>Homemade baked kale chips with olive oil and sea salt. Crispy and nutritious.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>21. Kiwi & Pumpkin Seeds</h3>
+                    <p>2 kiwis, peeled and sliced; 1–2 tbsp roasted pumpkin seeds</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>22. Mixed Nuts</h3>
+                    <p>A handful (1 oz) of unsalted almonds, walnuts, and cashews. Rich in healthy fats and protein.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>23. Oatmeal Energy Bites</h3>
+                    <p>Homemade bites with oats, nut butter, and seeds; Lightly sweetened with a little honey</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>24. Orange or Clementines</h3>
+                    <p>1 orange or 2 clementines; Great source of fiber and vitamin C</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>25. Orange Slices & Almonds</h3>
+                    <p>Fresh orange segments with a small handful of almonds. Vitamin C and healthy fats.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>26. Overnight Oats Cup</h3>
+                    <p>Small portion of overnight oats with berries and chia seeds. Make-ahead option.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>27. Pear & Walnut Combo</h3>
+                    <p>1 small pear; Small handful of walnuts</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>28. Pear Slices with Walnuts</h3>
+                    <p>Fresh pear slices with crushed walnuts. Fiber and omega-3s.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>29. Protein Smoothie</h3>
+                    <p>Small smoothie with protein powder, banana, spinach, and almond milk. Quick nutrition.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>30. Rice Cakes with Avocado</h3>
+                    <p>Brown rice cakes topped with mashed avocado and everything bagel seasoning.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>31. Roasted Chickpeas</h3>
+                    <p>Oven-roasted chickpeas with paprika and garlic powder. Crunchy protein snack.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>32. Sliced Cucumber with Greek Yogurt Dip</h3>
+                    <p>Cucumber rounds; Plain Greek yogurt with herbs and garlic</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>33. Small Smoothie Snack</h3>
+                    <p>Spinach, half banana, a few berries; Unsweetened almond milk</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>34. Tomato Slices with Olive Oil & Pepper</h3>
+                    <p>Thick tomato slices; Drizzle of olive oil, pinch of salt, and pepper</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>35. Trail Mix</h3>
+                    <p>Homemade mix of almonds, walnuts, pumpkin seeds, and dried cranberries. Energy-boosting snack.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>36. Whole Grain Crackers & Avocado</h3>
+                    <p>5-6 whole grain crackers with mashed avocado. Healthy fats and complex carbs.</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>37. Whole-Grain Crackers with Avocado</h3>
+                    <p>Whole-grain crackers; Mashed avocado with lemon and pepper</p>
+                </div>
+                <div class="meal-card snack-card">
+                    <h3>38. Whole-Grain Rice Cake with Hummus</h3>
+                    <p>Brown rice cake; Hummus spread and cucumber slices</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="meal-section drink-section" id="drinks">
+            <h2>🥤 Healthy Living Drink Guide</h2>
+
+            <h3>🚫 Drinks to Avoid or Limit</h3>
+            <ul>
+                <li><strong>Sugary Drinks:</strong> Soda, sweet tea, fruit punch, flavored lemonades, and energy drinks (high in sugar and calories).</li>
+                <li><strong>Whole / Full-Fat Milk:</strong> Higher in saturated fat, which can negatively impact heart health.</li>
+                <li><strong>Excessive Alcohol:</strong> More than 1 drink/day for women or 2 for men can raise triglycerides and strain the heart.</li>
+                <li><strong>Dessert-Style Coffee Drinks:</strong> Mochas, frappuccinos, and large lattes made with whole milk, syrups, and whipped cream.</li>
+                <li><strong>Full-Fat Coconut Milk Beverages:</strong> Very high in saturated fat; better used sparingly.</li>
+                <li><strong>Milkshakes & Ice Cream-Based Smoothies:</strong> Loaded with saturated fat and sugar.</li>
+            </ul>
+
+            <h3>✅ Drinks That Support Healthy Living</h3>
+            <ul>
+                <li><strong>Water:</strong> The best daily drink for hydration and overall health—aim for about 8–12 cups per day, adjusted for your activity level.</li>
+                <li><strong>Green Tea:</strong> Naturally rich in catechins and antioxidants; enjoy 2–3 cups per day, unsweetened or lightly sweetened.</li>
+                <li><strong>Black Coffee:</strong> In moderation (about 1–3 cups per day), it provides antioxidants—just go easy on sugar and cream.</li>
+                <li><strong>Low-Fat or Skim Milk:</strong> Offers calcium and protein with less saturated fat than whole milk.</li>
+                <li><strong>Unsweetened Plant Milks:</strong> Almond, soy, oat, or cashew milk with no added sugar can be a heart-friendly choice.</li>
+                <li><strong>Herbal Teas:</strong> Hibiscus, mint, chamomile, and ginger teas are naturally caffeine-free and soothing.</li>
+                <li><strong>Pomegranate Juice:</strong> High in antioxidants; choose 100% juice and keep portions to about 4–6 oz at a time.</li>
+                <li><strong>Low-Sodium Vegetable Juice:</strong> Provides vitamins and minerals; choose versions without added sugar and with reduced salt.</li>
+                <li><strong>Red Wine (Optional):</strong> If you drink alcohol, up to 1 glass per day may fit into a heart-conscious lifestyle—always follow your doctor’s guidance.</li>
+            </ul>
+
+            <h3>⭐ Best Hydration & Drink Habits</h3>
+            <ul>
+                <li>Make <strong>water your default drink</strong> throughout the day.</li>
+                <li>Choose <strong>unsweetened</strong> beverages whenever possible.</li>
+                <li>Read labels on plant-based milks and juices for added sugars and oils.</li>
+                <li>Enjoy coffee and tea, but try not to turn them into dessert with heavy cream and syrups.</li>
+                <li>Talk with your healthcare provider about <strong>alcohol</strong> and what’s safe for your situation.</li>
+            </ul>
+        </div>
+
+<div class="tips" id="tips">
+            <h2>💡 Important Tips for LDL-Lowering Success</h2>
+            <ul>
+                <li><strong>Choose Healthy Fats:</strong> Focus on monounsaturated and polyunsaturated fats from olive oil, nuts, avocados, and fatty fish.</li>
+                <li><strong>Increase Soluble Fiber:</strong> Aim for 5-10 grams of soluble fiber daily from oats, beans, apples, and barley.</li>
+                <li><strong>Limit Saturated Fat:</strong> Keep saturated fat intake to less than 6% of total daily calories.</li>
+                <li><strong>Add Plant Sterols:</strong> Consume 2 grams daily from fortified foods or supplements to help block cholesterol absorption.</li>
+                <li><strong>Choose Lean Proteins:</strong> Opt for fish, poultry without skin, legumes, and plant-based proteins.</li>
+                <li><strong>Eat More Fish:</strong> Include fatty fish like salmon, mackerel, or sardines at least twice weekly for omega-3s.</li>
+                <li><strong>Go for Whole Grains:</strong> Replace refined grains with whole grain bread, brown rice, quinoa, and oats.</li>
+                <li><strong>Load Up on Vegetables:</strong> Aim for 5+ servings of vegetables and fruits daily for fiber and antioxidants.</li>
+                <li><strong>Stay Hydrated:</strong> Drink plenty of water throughout the day to support overall health.</li>
+                <li><strong>Practice Portion Control:</strong> Even healthy foods should be eaten in appropriate portions.</li>
+                <li><strong>Avoid Trans Fats:</strong> Eliminate foods with partially hydrogenated oils completely.</li>
+                <li><strong>Limit Added Sugars:</strong> Reduce intake of sugary drinks, desserts, and processed foods.</li>
+                <li><strong>Cook at Home:</strong> Preparing meals at home gives you control over ingredients and cooking methods.</li>
+                <li><strong>Use Healthy Cooking Methods:</strong> Bake, grill, steam, or sauté instead of frying.</li>
+                <li><strong>Read Labels:</strong> Check nutrition facts for cholesterol, saturated fat, and trans fat content.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
